@@ -17,4 +17,4 @@ button_locator = '.btn-primary'
 
 press_button = driver.find_element(By.CSS_SELECTOR, button_locator).click()
 
-sleep(3)
+sleep(2)

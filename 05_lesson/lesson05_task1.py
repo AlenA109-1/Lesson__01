@@ -21,4 +21,4 @@ press_bbutton.click() #имитирует клик мышкой
 # или search_bbutton.send_keys(Keys.RETURN)
 # #имитирует нажатие на Enter, не работает без импорта from selenium.webdriver.common.keys import Keys
 
-sleep(3)
+sleep(2)

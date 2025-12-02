@@ -12,6 +12,7 @@ driver = webdriver.Firefox() # открыть браузер
 
 driver.get("http://the-internet.herokuapp.com/login")
 
+# переменные - локаторы
 uname_locator = '#username'
 password_locator = '#password'
 button_locator = 'button.radius'
