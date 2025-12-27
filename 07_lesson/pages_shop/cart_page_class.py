@@ -1,6 +1,6 @@
 # Создать класс для страницы корзины, который будет содержать методы для нажатия
 # кнопки Checkout и проверки содержимого корзины.
-from pytest_selenium import driver
+
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
