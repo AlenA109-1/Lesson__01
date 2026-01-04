@@ -10,7 +10,7 @@ class ProjectApi:
 
     def __init__(self, base_url):
         self.base_url = base_url
-        self.token = ""
+        self.token = ''
 
     def create_project(self, title):
         token = self.token
@@ -31,15 +31,20 @@ class ProjectApi:
         awr = requests.get(f'{self.base_url}/api-v2/projects/{project_id}', headers=headers)
         return awr
 
-    def delete_project(self, project_id):
+    def change_project(self, project_id, deleted = False, title = ''):
         token = self.token
         headers = {
             "Content-Type": "application/json",
             "Authorization": f"Bearer {token}"
         }
-
-        response = requests.put(f'{self.base_url}/api-v2/projects/{project_id}', headers=headers)
+        data_body = {
+            "deleted": deleted,
+            "title": title
+        }
+        response = requests.put(f'{self.base_url}/api-v2/projects/{project_id}',
+                                headers=headers, json=data_body)
         return response
+
 
 
 
